@@ -15,6 +15,9 @@
     ],
     "files": [
         "./app.ts",
-        "./typings/angular2/angular2.d.ts"
+        "./typings/angular2/angular2.d.ts",
+        "./typings/angularfire/angularfire.d.ts",
+        "./typings/firebase/firebase.d.ts",
+        "./typings/tsd.d.ts"
     ]
 }
