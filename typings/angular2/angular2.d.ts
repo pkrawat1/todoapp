@@ -37,6 +37,6 @@ declare module "angular2/angular2" {
       locale?: string,
       device?: string
     });
-  function For();
-  function If();
+  function NgFor();
+  function NgIf();
 }

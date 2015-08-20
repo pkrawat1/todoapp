@@ -11,19 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require("angular2/angular2");
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'Pankaj';
+var TodoApp = (function () {
+    function TodoApp() {
+        this.todos = ["Eat Breakfast", "Walk Dog", "Breathe"];
     }
-    MyAppComponent = __decorate([
+    TodoApp.prototype.addTodo = function (todo) {
+        this.todos.push(todo);
+    };
+    TodoApp.prototype.doneTyping = function ($event) {
+        console.log($event.which);
+        if ($event.which === 13) {
+            this.addTodo($event.target.value);
+            $event.target.value = null;
+        }
+    };
+    TodoApp = __decorate([
         angular2_1.Component({
-            selector: 'my-app'
+            selector: 'todo-app'
         }),
         angular2_1.View({
-            template: '<h1>Hello {{ name }}</h1>'
+            template: "\n    <ul>\n      <li *ng-for=\"#todo of todos\">\n        {{ todo }}\n      </li>\n    </ul>\n    <input #todotext (keyup)=\"doneTyping($event)\">\n    <button (click)=\"addTodo(todotext.value, $event)\">Add Todo</button>\n  ",
+            directives: [angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])
-    ], MyAppComponent);
-    return MyAppComponent;
+    ], TodoApp);
+    return TodoApp;
 })();
-angular2_1.bootstrap(MyAppComponent);
+angular2_1.bootstrap(TodoApp);
