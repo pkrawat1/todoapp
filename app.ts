@@ -8,13 +8,16 @@ import {Component, View, bootstrap, NgFor, NgIf} from "angular2/angular2";
 
 @View({
   template: `
-    <ul>
-      <li *ng-for="#todo of todos">
-        {{ todo }}
-      </li>
-    </ul>
-    <input #todotext (keyup)="doneTyping($event)">
-    <button (click)="addTodo(todotext.value, $event)">Add Todo</button>
+    <h2>
+      <ul>
+        <li *ng-for="#todo of todos">
+          {{ todo }}
+        </li>
+      </ul>
+
+      <input #todotext (keyup)="doneTyping($event)">
+      <button (click)="addTodo(todotext.value, $event)">Add Todo</button>
+    </h2>
   `,
   directives: [NgFor, NgIf]
 })

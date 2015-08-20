@@ -30,7 +30,7 @@ var TodoApp = (function () {
             selector: 'todo-app'
         }),
         angular2_1.View({
-            template: "\n    <ul>\n      <li *ng-for=\"#todo of todos\">\n        {{ todo }}\n      </li>\n    </ul>\n    <input #todotext (keyup)=\"doneTyping($event)\">\n    <button (click)=\"addTodo(todotext.value, $event)\">Add Todo</button>\n  ",
+            template: "\n    <h2>\n      <ul>\n        <li *ng-for=\"#todo of todos\">\n          {{ todo }}\n        </li>\n      </ul>\n\n      <input #todotext (keyup)=\"doneTyping($event)\">\n      <button (click)=\"addTodo(todotext.value, $event)\">Add Todo</button>\n    </h2>\n  ",
             directives: [angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])

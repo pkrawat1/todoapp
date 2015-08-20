@@ -1,0 +1,29 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "Todo App in Angularjs 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkrawat1/todoapp.git"
+  },
+  "author": "Pankaj Kumar Rawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkrawat1/todoapp/issues"
+  },
+  "homepage": "https://github.com/pkrawat1/todoapp#readme",
+  "keywords": [
+    "angular2",
+    "typescript",
+    "tds"
+  ],
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.35",
+    "systemjs": "^0.18.11",
+    "traceur": "0.0.91"
+  }
+}

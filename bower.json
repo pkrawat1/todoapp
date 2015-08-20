@@ -1,0 +1,22 @@
+{
+  "name": "todoapp",
+  "version": "0.0.1",
+  "homepage": "index.html",
+  "authors": [
+    "Pankaj Rawat <pankajrawat19sept@gmail.com>"
+  ],
+  "description": "angular 2 typescript todoapp",
+  "main": "app.ts",
+  "keywords": [
+    "angular2",
+    "typescript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
